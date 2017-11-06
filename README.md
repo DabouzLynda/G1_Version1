@@ -1,5 +1,5 @@
 # G1_version06-11
-Notes à destination du client
+# Notes à destination du client
 
 Afin d’optimiser les conditions d’utilisation de la TodoList il est conseillé d’utiliser Chrome.
 
