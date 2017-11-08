@@ -1,0 +1,44 @@
+
+<div id="title">{{getCurrentListName()}}</div>
+<section *ngIf="shouldAllListsBeDisplayed();" class="listsOfLists" >
+  <span class="titre">
+    Mes Listes
+  </span>
+
+
+  <section class="lists">
+    <!-- <app-todo-list *ngFor="let list of getLists()" [list]="list" [clock]="list.clock"></app-todo-list> -->
+
+
+    <section *ngFor="let list of getLists()">
+      <div id="listPanel" class="panel panel-default" (dblclick)="setCurrentListFromId(list.id)">
+        <div class="panel-body">
+
+          <label>{{list.name}}</label>
+          <button class="pull-right btn btn-default" (click)="setCurrentListFromId(list.id)"><span class="glyphicon glyphicon-arrow-right" ></span></button>
+          <button class="pull-right btn btn-default" (click)="delete(list)"><span class="	glyphicon glyphicon-remove"></span></button>
+
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <div id="addArea">
+    <input id="addBtn" type="image" src="https://www.shareicon.net/data/128x128/2017/05/09/885759_add_512x512.png" (click)="setAddClick()" class="hvr-grow">
+    <div *ngIf="getAddClick()">
+
+      <form (ngSubmit)="createList(newListName.value); newListName.value=''">
+        <label>Créez votre liste :</label>
+        <input type="text" #newListName/>
+      </form>
+    </div>
+  </div>
+
+</section>
+
+
+
+<section *ngIf="!shouldAllListsBeDisplayed()">
+  <button class="btn btn-secondary" (click)="setCurrentListFromId()" style="margin:10px;"><span class="glyphicon glyphicon-arrow-left"></span></button>
+  <app-todo-list [list]="getCurrentList()" [clock]="getCurrentList().clock"></app-todo-list>
+</section>
