@@ -1,0 +1,104 @@
+section.lists {
+  display:block;
+
+}
+
+app-todo-list {
+  flex: 0 0 auto;
+  display: block;
+  border: solid black 1px;
+  border-radius: 0.5em;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+section.listsOfLists{
+  border: 2px solid black;
+  clear: both;
+  margin:5%;
+  position: relative;
+  border-radius: 0.5em;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+span.titre{
+  font-size: 200%;
+  padding: 5px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-bottom-right-radius: 0.5em;
+  }
+input{
+  margin-bottom:10px;
+}
+
+#addBtn{
+  width:50px;
+}
+
+#addArea{
+  text-align: center;
+}
+
+div#title{
+  margin:5%;
+  text-align: center;
+  font-size: 300%;
+  font-weight: bold;
+}
+
+#listPanel{
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+label{
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.panel-body button{
+  margin-right: 10px;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+.btn-default {
+    display: inline-block;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active {
+    transform: scale(1.1);
+}
+
+.panel-default {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.panel-default:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}

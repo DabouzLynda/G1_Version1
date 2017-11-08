@@ -1,0 +1,28 @@
+
+<section [style.backgroundColor]="getColor()">
+  <button type="pull-right button" name="button" (click)="list.items.sort(sortByDate);" class="btn-default">Trier</button>
+
+  <section class="items">
+
+    <form >
+
+      <input name="name" placeholder="Ajouter un élément..." type="text" #newItemLabel />
+
+      <input placeholder="Ajouter des participants" type="text" #newItemPart/>
+      <input placeholder="Ajouter une date" type="date" #newItemDate/>
+      <button class="btn btn-default" (click)="createItem(newItemLabel.value, newItemPart.value, newItemDate.value); newItemLabel.value=''; newItemPart.value=''; newItemDate.value=''">OK</button>
+    </form>
+
+    <!-- AJOUT PANEL GROUP -->
+    <div class="panel-group">
+      <app-todo-item *ngFor="let item of list.items"
+                     [clock]="item.clock"
+                     [item]="item"
+                     [listId]="list.id">
+      </app-todo-item>
+    </div>
+
+  </section>
+
+</section>
+
